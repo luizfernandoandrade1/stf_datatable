@@ -9,13 +9,14 @@ import { CommonModule } from '@angular/common';
       ],
       declarations: [
         DataColumnComponent,
-        DataTemplateComponent,
-        DataTableUtil
+        DataTemplateComponent
       ],
       exports: [
         DataColumnComponent,
-        DataTemplateComponent,
-        DataTableUtil
+        DataTemplateComponent
+      ],
+      providers: [
+          DataTableUtil
       ]
 })
 export class DataTableModule { }
