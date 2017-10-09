@@ -1,0 +1,41 @@
+.table, .table thead tr th {
+    text-align: center;
+}
+   
+.table thead tr th {
+    background-color: #29345D;
+    color: #fff;
+    opacity: 1;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+}
+
+.table tbody tr td {
+    padding: .5rem .75rem;
+    vertical-align: middle !important;
+}
+
+.sortable-icon {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    font-size: 1.3em;
+}
+
+.sortable-icon:hover {
+    cursor: pointer;
+}
+
+table, th, td {
+    border: solid white 1px;
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #F5F5F5;
+}
+
+.table-hover tbody tr:hover,
+.table-striped tbody tr:nth-of-type(odd):hover {
+    background-color: rgba(0, 0, 0, .075);
+}
