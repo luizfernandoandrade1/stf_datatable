@@ -1,2 +1,1 @@
-export { DataColumnComponent } from './data-column/data-column.component.ts';
-export { DataTableComponent } from './data-table/table.component.ts'
+export { DataTableModule } from './datatable.module.ts';
