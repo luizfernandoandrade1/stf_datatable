@@ -1,8 +1,12 @@
 {
   "name": "stefanini-datatable",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A datatable easily to implement and to costumize.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/luizfernandoandrade1/stf_datatable"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
