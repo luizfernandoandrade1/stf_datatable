@@ -8,11 +8,11 @@ export class DataTableUtil {
     }
     
 
-    buildDataTableProperties(dataList: any[], columns: any[]) {  
+    buildDataTableProperties(dataList: any[]) {  
         
         let fullColumn = {header: "", sortable: false, columnType: "", isVisible: true, values: []};
     
-        columns.forEach(column => { 
+        this.columns.forEach(column => { 
           fullColumn.header = column.header;
           fullColumn.columnType = column.columnType;
           fullColumn.sortable = column.sortable
@@ -24,6 +24,6 @@ export class DataTableUtil {
           fullColumn = {header: "", sortable: false, columnType: "", isVisible: true, values: []};
         });
 
-        console.log(columns);
+        return this.datatable;
     }
 }

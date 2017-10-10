@@ -16,14 +16,6 @@ export class DataTableComponent implements OnInit {
   constructor() { 
   }
 
-  ngOnInit() {
-    this.buildDataTableHeaderTitle(this.dataTableProperties);
-    console.log(this.dataTableProperties);
-  }
+  ngOnInit() { }
 
-  buildDataTableHeaderTitle(data: any) {
-    for(var i in data) {
-      this.headerTitle.push(i);
-    }
-  }
 }
