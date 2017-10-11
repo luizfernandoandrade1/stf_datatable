@@ -8,11 +8,6 @@ import { CommonModule } from '@angular/common';
     imports: [
         CommonModule
       ],
-      declarations: [
-        DataColumnComponent,
-        DataTemplateComponent,
-        DataTableComponent
-      ],
       exports: [
         DataColumnComponent,
         DataTemplateComponent,
@@ -20,6 +15,9 @@ import { CommonModule } from '@angular/common';
       ],
       providers: [
           DataTableUtil
+      ],
+      bootstrap: [
+        DataTableComponent
       ]
 })
 export class DataTableModule { }
