@@ -1,19 +1,19 @@
 import { DataTableComponent } from './data-table/table.component';
 import { DataTableUtil } from './data-table/data-table.util';
-import { DataTemplateComponent } from './data-template/data-template.component';
 import { DataColumnComponent } from './data-column/data-column.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 @NgModule({
       declarations: [
-          DataColumnComponent  
+          DataColumnComponent,
+          DataTableComponent  
       ],
       imports: [
         CommonModule
       ],
       exports: [
-        DataTemplateComponent,
-        DataTableComponent
+        DataTableComponent,
+        DataColumnComponent
       ],
       providers: [
           DataTableUtil
