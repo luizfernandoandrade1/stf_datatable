@@ -1,35 +1,22 @@
-<hr>
 <div>
-    <div>    
-        </div>
-        <div class="columns columns-right pull-right">
-            <button class="btn btn-default" type="button" name="refresh" title="Refresh"><i class="glyphicon fa fa-refresh"></i></button>
-            <button type="button" class="btn btn-default dropdown-toggle"><i class="glyphicon fa fa-columns"></i> <span class="caret"></span></button>
-        </div>
-        <div class="search">
-            <input type="text" style="width: 30%; height: 34px" class="form-control pull-right" placeholder="Buscar por">
-        </div>
-        <br/>
-        <br/>
-        <div class="grid">
-        
-            <table id="" class="table table-striped">
-                <thead style="background-color: #29345D;">
-                <tr>
-                    <th *ngFor="let dataTable of dataTableProperties">
-                        <input type="checkbox" value="" *ngIf="dataTable.columnType === 'checkBox'; else elseBlock" >
-                        <ng-template #elseBlock>{{dataTable.header}}</ng-template>
-                        <div *ngIf="dataTable.sortable" class="sortable-icon">
-                            <i class="align-right fa fa-sort" aria-hidden="true"></i>
-                        </div>
-                    </th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr *ngFor="let var of dataTableProperties[0].values; let q = index">
-                    <td *ngFor="let dataTable of dataTableProperties; let i = index"><input type="checkbox" value="" *ngIf="dataTable.columnType === 'checkBox'; else elseBlock" ><ng-template #elseBlock>{{dataTable.values[q]}}</ng-template></td>
-                </tr>      
-                </tbody>
-            </table>
-        </div>
+    <div class="grid">
+        <table id="" class="table table-striped">
+            <thead style="background-color: #29345D;">
+            <tr>
+                <th *ngFor="let dataTable of dataTableProperties">
+                    <input type="checkbox" value="" *ngIf="dataTable.columnType === 'checkBox'; else elseBlock" >
+                    <ng-template #elseBlock>{{dataTable.header}}</ng-template>
+                    <div *ngIf="dataTable.sortable" class="sortable-icon">
+                        <i class="align-right fa fa-sort" aria-hidden="true"></i>
+                    </div>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr *ngFor="let var of dataTableProperties[0].values; let q = index">
+                <td *ngFor="let dataTable of dataTableProperties; let i = index"><input type="checkbox" value="" *ngIf="dataTable.columnType === 'checkBox'; else elseBlock" ><ng-template #elseBlock>{{dataTable.values[q]}}</ng-template></td>
+            </tr>      
+            </tbody>
+        </table>
+    </div>
 </div>
