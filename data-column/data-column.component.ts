@@ -16,17 +16,17 @@ import {
 })
 export class DataColumnComponent implements AfterContentInit {
 
-  @Input() columnField: string;
+  @Input() public columnField: string;
 
-  @Input() columnHeader: string;
+  @Input() public columnHeader: string;
 
-  @Input() columnType: string;
+  @Input() public columnType: string;
 
-  @Input() sortable: boolean;
+  @Input() public sortable: boolean;
 
-  @Input() isVisible: boolean; 
+  @Input() public isVisible: boolean; 
 
-  @Output() addColumn = new EventEmitter();
+  @Output() public addColumn = new EventEmitter();
 
   constructor() { }
 
