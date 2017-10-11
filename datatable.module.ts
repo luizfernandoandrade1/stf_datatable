@@ -1,3 +1,4 @@
+import { DataTableComponent } from './data-table/table.component';
 import { DataTableUtil } from './data-table/data-table.util';
 import { DataTemplateComponent } from './data-template/data-template.component';
 import { DataColumnComponent } from './data-column/data-column.component';
@@ -9,11 +10,13 @@ import { CommonModule } from '@angular/common';
       ],
       declarations: [
         DataColumnComponent,
-        DataTemplateComponent
+        DataTemplateComponent,
+        DataTableComponent
       ],
       exports: [
         DataColumnComponent,
-        DataTemplateComponent
+        DataTemplateComponent,
+        DataTableComponent
       ],
       providers: [
           DataTableUtil
