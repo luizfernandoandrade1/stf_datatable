@@ -8,9 +8,6 @@ import { Component, ContentChild, Input, OnInit, QueryList, ViewChild, ViewChild
 })
 export class DataTableComponent implements OnInit {
 
-  headerTitle = [];
-  @Input() data: any[];
-
   @Input() dataTableProperties: any;
 
   constructor() { 
