@@ -5,11 +5,13 @@ import { DataColumnComponent } from './data-column/data-column.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 @NgModule({
-    imports: [
+      declarations: [
+          DataColumnComponent  
+      ],
+      imports: [
         CommonModule
       ],
       exports: [
-        DataColumnComponent,
         DataTemplateComponent,
         DataTableComponent
       ],
