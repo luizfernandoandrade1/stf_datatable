@@ -1,5 +1,5 @@
 import { DataColumnComponent } from '../data-column/data-column.component';
-import { Component, ContentChild, Input, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Component, Input, OnInit,   } from '@angular/core';
 
 @Component({
   selector: 'data-table',
