@@ -18,6 +18,8 @@ export class DataColumnComponent implements AfterContentInit {
 
   @Input() public columnField: string;
 
+  @Input() public columnIcon: string;
+
   @Input() public columnHeader: string;
 
   @Input() public columnType: string;
@@ -35,7 +37,8 @@ export class DataColumnComponent implements AfterContentInit {
                            sortable: this.sortable,
                            field: this.columnField, 
                            columnType: this.columnType,
-                           isVisible: this.isVisible});
+                           isVisible: this.isVisible,
+                           columnIcon: this.columnIcon});
   }
 
 }
