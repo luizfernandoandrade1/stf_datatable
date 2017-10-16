@@ -1,6 +1,6 @@
 {
   "name": "stf-datatable",
-  "version": "0.0.21",
+  "version": "0.0.22",
   "description": "A datatable easily to implement and to costumize.",
   "main": "index.js",
   "repository": {

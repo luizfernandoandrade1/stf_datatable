@@ -11,7 +11,7 @@ import {
 
 @Component({
   selector: 'data-column',
-  templateUrl: './data-column.component.html',
+  template: '<ng-content></ng-content>',
   styleUrls: ['./data-column.component.css']
 })
 export class DataColumnComponent implements AfterContentInit {

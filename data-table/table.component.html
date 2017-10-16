@@ -20,6 +20,7 @@
                 <td *ngFor="let dataTable of dataTableProperties; let i = index">
                     <input type="checkbox" value="" *ngIf="dataTable.columnType === 'checkBox'; else elseBlock" >
                     <ng-template #elseBlock>{{dataTable.values[q]}}</ng-template>
+                    <ng-content></ng-content>
                 </td>
             </tr>       
             </tbody>
