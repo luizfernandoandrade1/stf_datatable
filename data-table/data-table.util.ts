@@ -9,6 +9,7 @@ export class DataTableUtil {
     
 
     buildDataTableProperties(dataList: any[]) {  
+        this.clearDataTable();
         
         let fullColumn = {header: "", sortable: false, columnType: "", isVisible: true, columnIcon: "", values: []};
     
@@ -26,5 +27,9 @@ export class DataTableUtil {
         });
 
         return this.datatable;
+    }
+
+    clearDataTable(){
+        this.datatable = [];
     }
 }
