@@ -5,7 +5,7 @@
             <tr>
                 <th *ngFor="let dataTable of dataTableProperties">
                     <div *ngIf="dataTable.columnIcon" class="column-icon">
-                        <i class="align-left dataTable.columnIcon"></i>
+                        <i class="align-left {{dataTable.columnIcon}}"></i>
                     </div>
                     <input type="checkbox" value="" *ngIf="dataTable.columnType === 'checkBox'; else elseBlock" >
                     <ng-template #elseBlock>{{dataTable.header}}</ng-template>
