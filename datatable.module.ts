@@ -1,3 +1,4 @@
+import { ActionColumnComponent } from './action-column/action-column.component';
 import { DataTableComponent } from './data-table/table.component';
 import { DataTableUtil } from './data-table/data-table.util';
 import { DataColumnComponent } from './data-column/data-column.component';
@@ -6,20 +7,23 @@ import { CommonModule } from '@angular/common';
 @NgModule({
       declarations: [
           DataColumnComponent,
-          DataTableComponent  
+          DataTableComponent,
+          ActionColumnComponent  
       ],
       imports: [
         CommonModule
       ],
       exports: [
         DataTableComponent,
-        DataColumnComponent
+        DataColumnComponent,
+        ActionColumnComponent
       ],
       providers: [
           DataTableUtil
       ],
       bootstrap: [
-        DataTableComponent
+        DataTableComponent,
+        ActionColumnComponent
       ]
 })
 export class DataTableModule { }
