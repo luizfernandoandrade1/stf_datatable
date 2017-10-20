@@ -1,6 +1,6 @@
 import { DataColumnComponent } from '../data-column/data-column.component';
 import { Component, Input, OnInit, ViewChildren, QueryList, ElementRef, AfterViewInit, ViewChild, Renderer, ContentChildren, AfterViewChecked, } from '@angular/core';
-import { DataTableUtil } from 'app/data-table/data-table.util';
+import { DataTableUtil } from './data-table.util';
 
 @Component({
   selector: 'data-table',
