@@ -1,26 +1,30 @@
+import { Injectable } from "@angular/core";
+import { DataColumnComponent } from "app/data-column/data-column.component";
+
+
+@Injectable()
 export class DataTableUtil {
-    columns: any[] = [];
+    columns: DataColumnComponent[] = [];
     datatable: any[] = [];
     homeData: any[] = [];
 
     addColumnByEvent(column: any){
         this.columns.push(column);
-    }
-    
+    }    
 
     buildDataTableProperties(dataList: any[]) {  
         this.clearDataTable();
         
         let fullColumn = {header: "", sortable: false, columnType: "", isVisible: true, columnIcon: "", values: []};
-    
+        console.log(this.columns);
         this.columns.forEach(column => { 
-          fullColumn.header = column.header;
+          fullColumn.header = column.columnHeader;
           fullColumn.columnType = column.columnType;
           fullColumn.sortable = column.sortable
           fullColumn.isVisible = column.isVisible;
           fullColumn.columnIcon = column.columnIcon
           dataList.forEach(data => {
-            fullColumn.values.push(data[column.field]);
+            fullColumn.values.push(data[column.columnField]);
           });
           this.datatable.push(fullColumn);
           fullColumn = {header: "", sortable: false, columnType: "", isVisible: true, columnIcon: "", values: []};

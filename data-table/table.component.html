@@ -1,4 +1,7 @@
 <div>
+    <ng-container *ngComponentOutlet="">
+        <ng-content></ng-content>
+    </ng-container>
     <div class="grid">
         <table class="table table-striped">
             <thead>
@@ -16,12 +19,10 @@
             </tr>
             </thead>
             <tbody>
-                <tr class="q" *ngFor="let var of dataTableProperties[0].values; let q = index">
+                <tr class="q" *ngFor="let var of dataTableProperties[0]?.values; let q = index">
                     <td *ngFor="let dataTable of dataTableProperties; let i = index">
                         <input type="checkbox" value="" *ngIf="dataTable.columnType === 'checkBox'; else elseBlock" >
-                        <ng-template #elseBlock>{{dataTable.values[q]}}</ng-template>
-                        <ng-container *ngIf="dataTable.columnType === 'interactive'" *ngTemplateOutlet="interactiveColumn"></ng-container>
-                        <action-column></action-column>
+                        <ng-template #elseBlock>{{dataTable.values[q]}}</ng-template>                                        
                     </td>
                 </tr>       
             </tbody>
