@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { DataColumnComponent } from "app/data-column/data-column.component";
+import { DataColumnComponent } from "../data-column/data-column.component";
 
 
 @Injectable()
