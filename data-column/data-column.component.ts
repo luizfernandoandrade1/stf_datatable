@@ -20,6 +20,8 @@ export class DataColumnComponent implements AfterContentInit {
 
   @Input() public columnIcon: string;
 
+  @Input() public iconField: string;
+
   @Input() public columnHeader: string;
 
   @Input() public columnType: string;
@@ -38,7 +40,8 @@ export class DataColumnComponent implements AfterContentInit {
                            field: this.columnField, 
                            columnType: this.columnType,
                            isVisible: this.isVisible,
-                           columnIcon: this.columnIcon});
+                           columnIcon: this.columnIcon,
+                           iconField: this.iconField});
   }
 
 }

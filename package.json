@@ -1,6 +1,6 @@
 {
   "name": "stf-datatable",
-  "version": "0.0.27",
+  "version": "0.0.28",
   "description": "An Angular 4 dataTable, easily to implement and to costumize.\n You only need a JSON object and set what properties of your JSON you want to show",
   "main": "index.js",
   "repository": {
