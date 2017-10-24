@@ -14,9 +14,8 @@ export class DataTableUtil {
 
     buildDataTableProperties(dataList: any[]) {  
         this.clearDataTable();
-        
         let fullColumn = {header: "", sortable: false, columnType: "", isVisible: true, columnIcon: "", values: []};
-        console.log(this.columns);
+        
         this.columns.forEach(column => { 
           fullColumn.header = column.columnHeader;
           fullColumn.columnType = column.columnType;
@@ -29,7 +28,7 @@ export class DataTableUtil {
           this.datatable.push(fullColumn);
           fullColumn = {header: "", sortable: false, columnType: "", isVisible: true, columnIcon: "", values: []};
         });
-
+        
         return this.datatable;
     }
 

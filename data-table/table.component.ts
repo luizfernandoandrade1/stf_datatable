@@ -1,5 +1,19 @@
 import { DataColumnComponent } from '../data-column/data-column.component';
-import { Component, Input, OnInit, ViewChildren, QueryList, ElementRef, AfterViewInit, ViewChild, Renderer, ContentChildren, AfterViewChecked, } from '@angular/core';
+import {
+    AfterContentChecked,
+    AfterViewChecked,
+    AfterViewInit,
+    Component,
+    ContentChildren,
+    ElementRef,
+    Input,
+    OnChanges,
+    OnInit,
+    QueryList,
+    Renderer,
+    ViewChild,
+    ViewChildren,
+} from '@angular/core';
 import { DataTableUtil } from './data-table.util';
 
 @Component({
@@ -7,7 +21,7 @@ import { DataTableUtil } from './data-table.util';
   templateUrl: './table.component.html',
   styleUrls: ['./table.component.css']
 })
-export class DataTableComponent implements AfterViewChecked {
+export class DataTableComponent implements AfterContentChecked {
 
   @Input() data: any;
   
@@ -20,13 +34,14 @@ export class DataTableComponent implements AfterViewChecked {
     
   }
 
-  ngAfterViewChecked() { 
-
+  ngAfterContentChecked() {
+    this.dataTableUtil.columns = [];
     this.columns.toArray().forEach(column => {
       this.dataTableUtil.addColumnByEvent(column);
     });
 
     this.dataTableProperties = this.dataTableUtil.buildDataTableProperties(this.data);
   }
+
 
 }
