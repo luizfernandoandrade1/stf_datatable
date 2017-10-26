@@ -37,7 +37,7 @@ export class DataTableComponent implements AfterContentChecked {
   ngAfterContentChecked() {
     this.dataTableUtil.columns = [];
     this.columns.toArray().forEach(column => {
-      this.dataTableUtil.addColumnByEvent(column);
+      this.dataTableUtil.addColumn(column);
     });
 
     this.dataTableProperties = this.dataTableUtil.buildDataTableProperties(this.data);

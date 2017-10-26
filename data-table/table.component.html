@@ -20,7 +20,7 @@
             </thead>
             <tbody>
                 <tr class="q" *ngFor="let var of dataTableProperties[0]?.values; let q = index">
-                    <td *ngFor="let dataTable of dataTableProperties; let i = index">
+                    <td *ngFor="let dataTable of dataTableProperties;">
                         <input type="checkbox" value="" *ngIf="dataTable.columnType === 'checkBox'; else elseBlock" >
                         <ng-template #elseBlock>
                             <div *ngIf="dataTable.icons[q]" class="column-icon">

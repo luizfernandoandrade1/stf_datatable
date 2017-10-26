@@ -1,12 +1,8 @@
 import {
-    AfterContentInit,
-    AfterViewChecked,
-    AfterViewInit,
     Component,
     EventEmitter,
     Input,
     OnInit,
-    Output,
 } from '@angular/core';
 
 @Component({
@@ -14,7 +10,7 @@ import {
   template: '<ng-content></ng-content>',
   styleUrls: ['./data-column.component.css']
 })
-export class DataColumnComponent implements AfterContentInit {
+export class DataColumnComponent {
 
   @Input() public columnField: string;
 
@@ -30,18 +26,6 @@ export class DataColumnComponent implements AfterContentInit {
 
   @Input() public isVisible: boolean; 
 
-  @Output() public addColumn = new EventEmitter();
-
   constructor() { }
-
-  public ngAfterContentInit(): void {
-      this.addColumn.emit({header: this.columnHeader,
-                           sortable: this.sortable,
-                           field: this.columnField, 
-                           columnType: this.columnType,
-                           isVisible: this.isVisible,
-                           columnIcon: this.columnIcon,
-                           iconField: this.iconField});
-  }
 
 }

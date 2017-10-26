@@ -8,7 +8,7 @@ export class DataTableUtil {
     datatable: any[] = [];
     homeData: any[] = [];
 
-    addColumnByEvent(column: any){
+    addColumn(column: any){
         this.columns.push(column);
     }    
 

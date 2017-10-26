@@ -1,6 +1,6 @@
 {
   "name": "stf-datatable",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "An Angular 4 dataTable, easily to implement and to costumize.\n You only need a JSON object and set what properties of your JSON you want to show",
   "main": "index.js",
   "repository": {
@@ -20,14 +20,9 @@
     "@angular/platform-browser": "^4.2.4",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
-    "angular2-click-outside": "^0.1.0",
     "bootstrap": "^4.0.0-beta",
     "core-js": "^2.4.1",
     "date-fns": "^1.28.5",
-    "jquery": "^3.2.1",
-    "jquery-mask-plugin": "^1.14.12",
-    "moment": "^2.18.1",
-    "ng-click-outside": "^2.4.1",
     "ngx-slimscroll": "^3.3.3",
     "node-sass": "^4.5.3",
     "popper.js": "^1.12.5",
