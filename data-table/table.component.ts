@@ -8,7 +8,6 @@ import {
     ElementRef,
     Input,
     OnChanges,
-    OnInit,
     QueryList,
     Renderer,
     ViewChild,
@@ -24,6 +23,8 @@ import { DataTableUtil } from './data-table.util';
 export class DataTableComponent implements AfterContentChecked {
 
   @Input() data: any;
+
+  @Input() tableClasses: string;
   
   dataTableProperties: any[] = [];
 

@@ -3,7 +3,7 @@
         <ng-content></ng-content>
     </ng-container>
     <div class="grid">
-        <table class="table table-striped">
+        <table class="{{tableClasses}}">
             <thead>
             <tr>
                 <th *ngFor="let dataTable of dataTableProperties">
